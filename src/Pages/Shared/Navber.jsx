@@ -49,6 +49,7 @@ const navOptions = <>
   </div>
   <div className="navbar-end gap-5">
     <NavLink to='/login' className='btn '>Login</NavLink>
+ 
   </div>
 </div>
         </div>

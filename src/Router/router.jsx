@@ -8,6 +8,7 @@ import MainLayout from '../Layout/MainLayout';
 import OurMenu from '../Pages/MenuLayout/OurMenu';
 import Orderfood from '../Pages/OrderFood/Orderfood';
 import Login from '../Pages/Authentication/Login';
+import Signup from '../Pages/Authentication/Signup';
 
 
 const router = createBrowserRouter([
@@ -30,8 +31,11 @@ const router = createBrowserRouter([
    {
     path:'/login',
     element:<Login></Login>
+   },
+   {
+    path:'/reg',
+    element:<Signup></Signup>
    }
-
       ]
     },
   ]);

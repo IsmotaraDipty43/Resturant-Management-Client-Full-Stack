@@ -5,7 +5,7 @@ import Navber from '../Pages/Shared/Navber';
 
 const MainLayout = () => {
     const location = useLocation()
-    const noHeaderFoter = location.pathname.includes('/login')
+    const noHeaderFoter = location.pathname.includes('/login') ||  location.pathname.includes('/reg')
     return (
         <div>
       {noHeaderFoter ||     <Navber></Navber>}
