@@ -9,6 +9,8 @@ import OurMenu from '../Pages/MenuLayout/OurMenu';
 import Orderfood from '../Pages/OrderFood/Orderfood';
 import Login from '../Pages/Authentication/Login';
 import Signup from '../Pages/Authentication/Signup';
+import Private from './Private';
+import Dashbroad from '../Pages/Dashbroad/Dashbroad';
 
 
 const router = createBrowserRouter([
@@ -35,6 +37,10 @@ const router = createBrowserRouter([
    {
     path:'/reg',
     element:<Signup></Signup>
+   },
+   {
+    path:'/dashbroad',
+    element:<Private><Dashbroad></Dashbroad></Private>
    }
       ]
     },
