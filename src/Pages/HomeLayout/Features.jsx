@@ -6,7 +6,7 @@ const Features = () => {
     return (
         <div className='featured-item bg-fixed p-10 text-white mt-10 mb-10'>
             <SectionTitlee subHeading={'---Check it out---'} heading={'Featured Item'} />
-            <div className='md:flex gap-5 justify-center items-center pb-20 pt-12 bg-slate-500 bg-opacity-60 text-white'>
+            <div className='md:flex gap-5 justify-center items-center pb-20 pt-12 bg-slate-500 bg-opacity-60 text-white p-5'>
                 <div>
                     <img src={featuredImg} className="rounded-lg" alt="" />
                 </div>

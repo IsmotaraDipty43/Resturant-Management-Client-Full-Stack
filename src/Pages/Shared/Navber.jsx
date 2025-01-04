@@ -1,15 +1,26 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
-
+import { FaShoppingCart } from "react-icons/fa";
+import useCart from '../../Hooks/useCart';
 const Navber = () => {
   const {user, logOut} = useContext(AuthContext)
+  const [cart] = useCart()
+
+
+
 const navOptions = <>
-<NavLink to='/' > <li><a>Home</a></li></NavLink>
-<NavLink to='/menu'> <li><a>Our Menu</a></li></NavLink>
-<NavLink to='/orderfood/salad'> <li><a>Order Food</a></li></NavLink>
-<NavLink> <li><a>Contact Us</a></li></NavLink>
-<NavLink to='/dashbroad' > <li><a>Dashbroad</a></li></NavLink>
+<div className='gap-5 flex'>
+<NavLink to='/' >Home</NavLink>
+<NavLink to='/menu'> Our Menu</NavLink>
+<NavLink to='/orderfood/salad'> Order Food</NavLink>
+<NavLink to='contact'> Contact Us</NavLink>
+<NavLink to='dashbroad/cart' className='flex justify-center items-center text-lg gap-2' > 
+<FaShoppingCart />
+<div className="badge badge-secondary">+{cart?.length || 0}</div>
+
+</NavLink>
+</div>
 
 </>
 

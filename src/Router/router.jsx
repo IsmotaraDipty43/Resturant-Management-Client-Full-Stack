@@ -10,7 +10,8 @@ import Orderfood from '../Pages/OrderFood/Orderfood';
 import Login from '../Pages/Authentication/Login';
 import Signup from '../Pages/Authentication/Signup';
 import Private from './Private';
-import Dashbroad from '../Pages/Dashbroad/Dashbroad';
+import Dashbroad from '../Layout/Dashbroad';
+import Cartt from '../Pages/Dashbroad/Cartt';
 
 
 const router = createBrowserRouter([
@@ -38,12 +39,21 @@ const router = createBrowserRouter([
     path:'/reg',
     element:<Signup></Signup>
    },
-   {
-    path:'/dashbroad',
-    element:<Private><Dashbroad></Dashbroad></Private>
-   }
+   
       ]
     },
+    {
+      path: 'dashbroad',
+      element: <Dashbroad></Dashbroad>,
+      children: [
+        {
+          path: 'cart',
+          element: <Cartt></Cartt>
+        }
+      ]
+    }
+    
+
   ]);
 
 
