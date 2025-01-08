@@ -10,7 +10,7 @@ const Navber = () => {
 
 
 const navOptions = <>
-<div className='gap-5 flex'>
+<div className='gap-5 flex '>
 <NavLink to='/' >Home</NavLink>
 <NavLink to='/menu'> Our Menu</NavLink>
 <NavLink to='/orderfood/salad'> Order Food</NavLink>
@@ -36,7 +36,7 @@ const handleLogout = ()=>{
 
     return (
         <div>
-            <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl mx-auto">
+            <div className="navbar fixed z-10 bg-opacity-30 bg-black  max-w-screen-xl mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -55,17 +55,17 @@ const handleLogout = ()=>{
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-lg text-semibold">
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white text-lg text-semibold">
        {navOptions}
       </ul>
     </div>
 <div className='flex flex-col gap-1'>
-<a className="btn btn-ghost text-xl">BISTROBOSS</a>
+<a className="btn btn-ghost text-xl text-white">BISTROBOSS</a>
 </div>
   </div>
 
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 text-lg text-semibold">
+    <ul className="menu menu-horizontal px-1 text-lg text-semibold text-white">
     {navOptions}
     </ul>
   </div>

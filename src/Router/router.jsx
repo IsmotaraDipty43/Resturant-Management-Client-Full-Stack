@@ -12,6 +12,7 @@ import Signup from '../Pages/Authentication/Signup';
 import Private from './Private';
 import Dashbroad from '../Layout/Dashbroad';
 import Cartt from '../Pages/Dashbroad/Cartt';
+import Allusers from '../Pages/Dashbroad/Allusers';
 
 
 const router = createBrowserRouter([
@@ -44,12 +45,18 @@ const router = createBrowserRouter([
     },
     {
       path: 'dashbroad',
-      element: <Dashbroad></Dashbroad>,
+      element: <Private><Dashbroad></Dashbroad></Private>,
       children: [
+        //user routes
         {
           path: 'cart',
           element: <Cartt></Cartt>
-        }
+        },
+        //admin routes
+        {
+          path: 'alluser',
+          element: <Allusers></Allusers>
+        },
       ]
     }
     

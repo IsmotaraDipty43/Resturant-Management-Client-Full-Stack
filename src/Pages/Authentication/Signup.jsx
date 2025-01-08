@@ -4,8 +4,11 @@ import bgimg from '../../assets/others/authentication2.png'
 import { Link, Navigate, useNavigate, useNavigation } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
+import Sociallogin from '../../Component/Sociallogin';
 
 const Signup = () => {
+  const axiosPublic = useAxiosPublic();
     const {createUser,      updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
   const {
@@ -24,8 +27,16 @@ const Signup = () => {
       console.log('login:',loggeduser);
       updateUserProfile(data.name, data.photo)
       .then(()=>{
-console.log('user login');
-reset();
+const userinfo={
+  name:data.name,
+  email: data.email
+
+}
+
+axiosPublic.post('/users', userinfo)
+.then(res=>{
+  if(res.data.insertedId){
+    reset();
 Swal.fire({
   title: "User created sucessfully",
   showClass: {
@@ -44,6 +55,11 @@ Swal.fire({
   }
 });
 navigate('/');
+  }
+})
+
+
+
       })
        .catch(error=>{
         console.log(error);
@@ -120,6 +136,7 @@ navigate('/');
           <button type="button" onClick={handleReset} className="btn mt-5 bg-red-500 text-white">Reset</button>
         </div>
         <p className='text-base text-black'><small>Already Have and Account?<Link to='/login'>Login Here</Link></small></p>
+        <Sociallogin></Sociallogin>
       </form>
      
     </div>
