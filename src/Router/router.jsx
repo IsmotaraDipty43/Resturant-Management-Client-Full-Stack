@@ -13,6 +13,12 @@ import Private from './Private';
 import Dashbroad from '../Layout/Dashbroad';
 import Cartt from '../Pages/Dashbroad/Cartt';
 import Allusers from '../Pages/Dashbroad/Allusers';
+import ContactUs from '../Pages/Contact/ContactUs';
+import AddItem from '../Pages/Dashbroad/AddItem';
+import AdminRoute from './AdminRoute';
+import AdminHome from '../Pages/Dashbroad/AdminHome';
+import Manageitem from '../Pages/Dashbroad/ManageItem/Manageitem';
+import Updateitem from '../Pages/Dashbroad/Updateitem';
 
 
 const router = createBrowserRouter([
@@ -40,6 +46,10 @@ const router = createBrowserRouter([
     path:'/reg',
     element:<Signup></Signup>
    },
+  //  {
+  //   path: '/contact',
+  //   element: <ContactUs></ContactUs>
+  // }
    
       ]
     },
@@ -49,16 +59,36 @@ const router = createBrowserRouter([
       children: [
         //user routes
         {
+
           path: 'cart',
           element: <Cartt></Cartt>
         },
         //admin routes
         {
+       
           path: 'alluser',
-          element: <Allusers></Allusers>
+          element: <AdminRoute><Allusers></Allusers></AdminRoute>
+        },
+        {
+          path: '/dashbroad/addItems',
+          element:<AdminRoute><AddItem></AddItem></AdminRoute>
+        },
+        {
+          path:'/dashbroad/adminHome',
+          element:<AdminHome></AdminHome>
+        },
+        {
+          path:'/dashbroad/manageitems',
+          element:<AdminRoute><Manageitem></Manageitem></AdminRoute>
+        },
+        {
+          path:'/dashbroad/update/:id',
+          element:<AdminRoute><Updateitem></Updateitem></AdminRoute>,
+          loader: ({params})=> fetch(`https://bistro-boss-server-nine-jade.vercel.app/menu/${params.id}`)
         },
       ]
-    }
+    },
+
     
 
   ]);

@@ -12,8 +12,8 @@ import Sociallogin from '../../Component/Sociallogin';
 
 const Login = () => {
   const navigate = useNavigate();
-  // const  location = useLocation()
-  //  const from = location.state?.from?.pathname || '/'
+  const  location = useLocation()
+   const from = location.state?.from?.pathname || '/'
 
 
 

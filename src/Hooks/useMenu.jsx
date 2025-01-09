@@ -1,19 +1,18 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
+import useAxiosPublic from './useAxiosPublic';
 
 const useMenu = () => {
-     const [menu, setMenu] = useState([]);
-     const [loading , setLoading] = useState(true);
-       useEffect(() => {
-           fetch('http://localhost:5000/menu')
-               .then(res => res.json())
-               .then(data => {
-                  
-                   setMenu(data);
-                   setLoading(false);
-               })
-               .catch(err => console.error('Failed to fetch menu:', err));
-       }, []);
-       return [menu,loading]
+  const axiospublic = useAxiosPublic();
+  const { data: menu = [], isPending: loading, refetch } = useQuery({
+    queryKey: ['menu'],
+    queryFn: async () => {
+      const res = await axiospublic.get('/menu');
+      return res.data;
+    }
+  });
+
+  return [menu, loading, refetch];  // Fixed the typo here
 };
 
 export default useMenu;

@@ -5,7 +5,8 @@ import { AuthContext } from '../Provider/AuthProvider';
 
 // Create the axios instance outside of the hook to avoid re-creation on every render
 const axiosSecure = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://bistro-boss-server-nine-jade.vercel.app',
+  
 });
 
 const useAxiosSecure = () => {

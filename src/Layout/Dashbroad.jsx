@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { FaCalendar, FaHome, FaList, FaShoppingCart, FaUserCog } from "react-icons/fa";
 import { GoCodeReview } from 'react-icons/go';
 import { MdOutlineRestaurantMenu, MdRateReview, MdRestaurantMenu } from 'react-icons/md';
@@ -10,6 +10,16 @@ import useAdmin from '../Hooks/useAdmin';
 
 const Dashbroad = () => {
   const [isAdmin] = useAdmin();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // If the user is an admin, navigate to 'alluser' by default, else 'cart'
+    if (isAdmin) {
+      navigate('/dashbroad/adminHome');  // Redirect to Allusers if admin
+    } else {
+      navigate('/dashbroad/cart');  // Redirect to Cartt if normal user
+    }
+  }, [isAdmin, navigate]);
     return (
         <div className="flex gap-10 flex-col md:flex-row">
             <div className="w-64 min-h-screen bg-orange-400">
