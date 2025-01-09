@@ -1,6 +1,13 @@
+
+
+
+
 # BistroBoss - Restaurant Website
 
 BistroBoss is a fully responsive restaurant website with two parts: User and Admin. It provides a seamless and secure experience for users to browse and order food, while giving the admin control over managing food items and users.
+
+![BistroBoss](./src/assets/home/home.png)
+
 
 ## Features
 
