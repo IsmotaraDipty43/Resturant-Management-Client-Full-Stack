@@ -40,12 +40,9 @@ const Manageitem = () => {
                     console.error("Error during deletion:", error); // Log error details
                     Swal.fire("Error", error.message, "error");
                 }
-                
             }
         });
     };
-
-
 
     if (loading) {
         return <div>Loading...</div>;
@@ -55,42 +52,41 @@ const Manageitem = () => {
         <div>
             <SectionTitlee heading={'Manages All Item'} subHeading={'----Hurry Up----'} />
 
-            <div className="overflow-x-auto">
-                <table className="table">
+            <div className="overflow-x-auto max-h-[calc(100vh-200px)] overflow-y-auto">
+                <table className="table w-full table-auto min-w-full">
                     <thead>
                         <tr>
-                            <th>SL No.</th>
-                            <th>Image</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Update</th>
-                            <th>Delete</th>
+                            <th className="px-2 py-2">SL No.</th>
+                            <th className="px-2 py-2">Image</th>
+                            <th className="px-2 py-2">Name</th>
+                            <th className="px-2 py-2">Price</th>
+                            <th className="px-2 py-2">Update</th>
+                            <th className="px-2 py-2">Delete</th>
                         </tr>
                     </thead>
                     <tbody>
                         {menu.map((item, index) => (
                             <tr key={item._id}>
-                                <th>{index + 1}</th>
-                                <td>
-                                    <div className="flex items-center gap-3">
+                                <td className="px-2 py-2">{index + 1}</td>
+                                <td className="px-2 py-2">
+                                    <div className="flex items-center md:gap-3">
                                         <div className="avatar">
-                                            <div className="mask mask-squircle h-12 w-12">
-                                                <img src={item.image} alt={item.name} />
+                                            <div className="mask mask-squircle w-7 h-7 md:h-12 md:w-12 overflow-hidden">
+                                                <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
                                             </div>
                                         </div>
                                     </div>
                                 </td>
-                                <td>{item.name}</td>
-                                <td>{item.price}</td>
-                                <td>
-                                   <Link to={`/dashbroad/update/${item._id}`}> <button
-                                        className="btn btn-ghost btn-xs"
-                                  
-                                    >
-                                        <MdOutlineSystemUpdateAlt className="text-lg text-green-500" />
-                                    </button></Link>
+                                <td className="px-2 py-2">{item.name}</td>
+                                <td className="px-2 py-2">{item.price}</td>
+                                <td className="px-2 py-2">
+                                    <Link to={`/dashbroad/update/${item._id}`}>
+                                        <button className="btn btn-ghost btn-xs">
+                                            <MdOutlineSystemUpdateAlt className="text-lg text-green-500" />
+                                        </button>
+                                    </Link>
                                 </td>
-                                <td>
+                                <td className="px-2 py-2">
                                     <button
                                         className="btn btn-ghost btn-xs"
                                         onClick={() => handledeleteItem(item)}

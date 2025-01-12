@@ -14,15 +14,20 @@ import 'swiper/css/navigation';
 
 // // import required modules
 import { Navigation } from 'swiper/modules';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
 const Testimonials = () => {
     const [reviews,setreview] = useState([])
-    useEffect(()=>{
-        fetch('/review.json')
-        .then(res=>res.json())
-        .then(data=>setreview(data))
-        
-    },[])
+    const axiosPublic = useAxiosPublic();
+    useEffect(() => {
+        axiosPublic.get('/review') // Assuming your API endpoint for fetching reviews is '/reviews'
+            .then(response => {
+                setreview(response.data); // Set the reviews data from the response
+            })
+            .catch(error => {
+                console.error('Error fetching reviews:', error);
+            });
+    }, [axiosPublic]);
     return (
         <section className='mt-10-mb-10 my-20'>
             <SectionTitlee subHeading={'---What Our Clients Say---'} heading={'TESTIMONIALS'}></SectionTitlee>

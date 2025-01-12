@@ -51,7 +51,7 @@ const AddItem = () => {
   return (
     <div>
       <SectionTitlee heading={'ADD ITEMS'} subHeading={"----What's New----"}></SectionTitlee>
-      <div className="w-full">
+      <div className="w-full p-5">
         <div className="bg-gray-100 mt-10 mb-10 p-8 rounded-lg shadow-lg">
           <form className="flex flex-col gap-6" onSubmit={handleSubmit(onSubmit)}>
             {/* Name Field */}

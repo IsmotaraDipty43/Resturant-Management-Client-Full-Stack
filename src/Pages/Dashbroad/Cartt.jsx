@@ -4,6 +4,7 @@ import useCart from '../../Hooks/useCart';
 import { FaTrash } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../Hooks/useAxiosSecure';
+import { Link } from 'react-router-dom';
 
 const Cartt = () => {
   const [cart = [], refetch] = useCart(); // Provide a default empty array for `cart`
@@ -40,7 +41,7 @@ const Cartt = () => {
       }
     });
   };
-
+ 
   return (
     <div className="mt-10 mb-10">
       <SectionTitlee
@@ -55,7 +56,9 @@ const Cartt = () => {
         <h1 className="text-2xl font-bold text-black">
           Total Price: {totalPrice}
         </h1>
-        <button className="btn bg-purple-500 text-2xl text-white">Pay</button>
+{
+  cart.length?       <Link to='/dashbroad/payment'> <button  className="btn bg-purple-500 text-2xl text-white">Pay</button></Link> :  <button disabled  className="btn bg-purple-500 text-2xl text-white">Pay</button>
+}
       </div>
 
       <div className="overflow-x-auto mt-5">
@@ -71,6 +74,7 @@ const Cartt = () => {
             </tr>
           </thead>
           <tbody className="text-black text-xl">
+            
             {cart.map((item, ind) => (
               <tr key={item._id}>
                 <th>{ind + 1}</th>

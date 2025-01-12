@@ -39,9 +39,14 @@ BistroBoss is a fully responsive restaurant website with two parts: User and Adm
 - **MongoDB**: For storing food items, users, and orders.
 - **Node.js**: For the backend server.
 - **Express.js**: For handling HTTP requests and API endpoints.
+- **Stripe Payment Gateway**: For processing secure online payments.
 
 ### Security
 - **JWT Tokens**: User authentication and authorization using JSON Web Tokens.
+### Testing Account
+# Admin Access
+# Email: Admin@gmail.com
+# Password: Admin1@
 
 ## Live Link
 [Visit BistroBoss](https://bistro-boss-86203.web.app/)

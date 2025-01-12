@@ -19,6 +19,12 @@ import AdminRoute from './AdminRoute';
 import AdminHome from '../Pages/Dashbroad/AdminHome';
 import Manageitem from '../Pages/Dashbroad/ManageItem/Manageitem';
 import Updateitem from '../Pages/Dashbroad/Updateitem';
+import Payment from '../Pages/Dashbroad/Payment/Payment';
+import PaymentHistory from '../Pages/Dashbroad/PaymentHistory';
+import UserHome from '../Pages/Dashbroad/User/UserHome';
+import AddReview from '../Pages/Dashbroad/User/Addreview';
+
+
 
 
 const router = createBrowserRouter([
@@ -63,6 +69,25 @@ const router = createBrowserRouter([
           path: 'cart',
           element: <Cartt></Cartt>
         },
+        {
+
+          path: 'payment',
+          element: <Payment></Payment>
+        },
+        {
+
+          path: 'paymentHistory',
+          element: <PaymentHistory></PaymentHistory>
+        },
+        {
+          path:'userHome',
+          element:<UserHome></UserHome>
+        },
+        {
+          path:'review',
+          element:<AddReview></AddReview>
+
+        },
         //admin routes
         {
        
@@ -74,9 +99,10 @@ const router = createBrowserRouter([
           element:<AdminRoute><AddItem></AddItem></AdminRoute>
         },
         {
-          path:'/dashbroad/adminHome',
-          element:<AdminHome></AdminHome>
+          path: '/dashbroad/adminHome',
+          element:<AdminRoute><AdminHome></AdminHome></AdminRoute>
         },
+      
         {
           path:'/dashbroad/manageitems',
           element:<AdminRoute><Manageitem></Manageitem></AdminRoute>
@@ -88,6 +114,11 @@ const router = createBrowserRouter([
         },
       ]
     },
+
+    {
+      path:'/contact',
+      element:<ContactUs></ContactUs>
+    }
 
     
 

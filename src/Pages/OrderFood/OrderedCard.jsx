@@ -76,7 +76,7 @@ else{
     <div>
       <div className="card bg-base-100 shadow-xl p-0">
         <figure>
-          <img src={image} alt={name} />
+          <img src={image} alt={name} className='w-full h-60'/>
         </figure>
         <p className="text-lg bg-slate-900 right-0 text-white mr-4 mt-4 absolute px-4 font-semibold">Price: ${price}</p>
         <div className="card-body text-center flex flex-col items-center">
