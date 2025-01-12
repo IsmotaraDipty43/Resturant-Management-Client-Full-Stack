@@ -43,10 +43,11 @@ BistroBoss is a fully responsive restaurant website with two parts: User and Adm
 
 ### Security
 - **JWT Tokens**: User authentication and authorization using JSON Web Tokens.
+
 ### Testing Account
-# Admin Access
-# Email: Admin@gmail.com
-# Password: Admin1@
+- **Admin Access**:
+- **Email**: Admin@gmail.com
+- **Password**:  Admin1@
 
 ## Live Link
 [Visit BistroBoss](https://bistro-boss-86203.web.app/)
