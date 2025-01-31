@@ -7,7 +7,7 @@ const MainLayout = () => {
     const location = useLocation()
     const noHeaderFoter = location.pathname.includes('/login') ||  location.pathname.includes('/reg')
     return (
-        <div>
+        <div className='container mx-auto'>
       {noHeaderFoter ||     <Navber></Navber>}
             <Outlet></Outlet>
        {noHeaderFoter ||      <Footer></Footer>}

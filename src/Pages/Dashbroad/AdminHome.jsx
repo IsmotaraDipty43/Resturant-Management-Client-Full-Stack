@@ -77,7 +77,7 @@ const AdminHome = () => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center p-8">
+        <div className="flex flex-col items-center justify-center p-8 w-full">
             <h2 className="md:text-3xl text-xl text-black font-bold mb-5">
                 Hi Welcome <span>{user?.displayName ? user.displayName : 'Back.'}</span>
             </h2>

@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 
 const Cartt = () => {
   const [cart = [], refetch] = useCart(); // Provide a default empty array for `cart`
-  console.log(cart);
 
   const secureAxios = useAxiosSecure();
 
@@ -43,7 +42,7 @@ const Cartt = () => {
   };
  
   return (
-    <div className="mt-10 mb-10">
+    <div className="mt-10 w-full mb-10">
       <SectionTitlee
         heading={'wanna add more?'}
         subHeading={'----My Cart----'}

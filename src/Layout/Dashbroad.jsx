@@ -13,8 +13,8 @@ const Dashbroad = () => {
 
 
   return (
-    <div className="flex gap-10 flex-col md:flex-row">
-      <div className="w-full md:w-64 min-h-screen bg-orange-400">
+    <div className="flex gap-10 flex-col w-full  md:3/12 md:flex-row">
+      <div className="w-full md:w-96 min-h-screen bg-orange-400">
         <ul className="menu p-4 gap-5">
           {isAdmin ? (
             <>
@@ -89,7 +89,7 @@ const Dashbroad = () => {
           </li>
         </ul>
       </div>
-      <div className="flex-1 flex col md: flex-row md:p-8">
+      <div className="w-full md:w-8/12 flex-col flex md:flex-row md:p-8 justify-center ">
         <Outlet />
       </div>
     </div>
