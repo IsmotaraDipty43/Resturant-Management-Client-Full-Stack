@@ -49,7 +49,7 @@ const Manageitem = () => {
     }
 
     return (
-        <div>
+        <div className='w-full'>
             <SectionTitlee heading={'Manages All Item'} subHeading={'----Hurry Up----'} />
 
             <div className="overflow-x-auto max-h-[calc(100vh-200px)] overflow-y-auto">

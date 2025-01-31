@@ -56,7 +56,7 @@ Swal.fire({
           });
     }
     return (
-        <div>
+        <div className='w-full'>
             <SectionTitlee heading={'manage all users'} subHeading={'----How Many??----'}></SectionTitlee>
            <div className='flex justify-evenly my-4'>
            <h2 className='text-3xl font-bold text-black'>All Users</h2>

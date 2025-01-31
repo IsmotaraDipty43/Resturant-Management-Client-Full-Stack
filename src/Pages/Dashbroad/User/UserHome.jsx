@@ -5,7 +5,7 @@ const UserHome = () => {
     const { user } = useAuth();
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <div className="flex flex-col w-full items-center justify-center min-h-screen bg-gray-100">
             <div className="bg-white shadow-lg rounded-lg p-8 text-center">
                 <h1 className="text-2xl font-bold text-gray-800">
                     Welcome, {user?.displayName || 'User'}!

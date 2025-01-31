@@ -23,6 +23,7 @@ import Payment from '../Pages/Dashbroad/Payment/Payment';
 import PaymentHistory from '../Pages/Dashbroad/PaymentHistory';
 import UserHome from '../Pages/Dashbroad/User/UserHome';
 import AddReview from '../Pages/Dashbroad/User/Addreview';
+import PaymentSuccessSSL from '../Pages/Dashbroad/PaymentSuccessSSL';
 
 
 
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
    {
     path:'/',
     element:<Home></Home>
+   },
+   {
+    path:"/success",
+    element:<PaymentSuccessSSL></PaymentSuccessSSL>
    },
    {
     path:'/menu',
