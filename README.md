@@ -58,10 +58,10 @@ BistroBoss is a fully responsive restaurant website with two parts: User and Adm
 Follow these steps to set up and run the project on your local machine using **VS Code**.
 
 1️⃣ **Clone the Repository**  
-   git clone https://github.com/your-username/book-a-tutor.git  
+   git clone https://github.com/IsmotaraDipty43/Resturant-Management-Client-Full-Stack 
 
 2️⃣ **Navigate to the Project Folder**  
-   cd book-a-tutor  
+   cd bistro-boss-client-project  
 
 3️⃣ **Open the Project in VS Code**  
    code .  
