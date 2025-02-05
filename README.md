@@ -53,3 +53,51 @@ BistroBoss is a fully responsive restaurant website with two parts: User and Adm
 ## Backend GitHub Link
 [Backend GitHub Repository](https://github.com/IsmotaraDipty43/Resturant-mangment-website-Server-side)
 
+## 🛠 How to Run the Project Locally
+
+Follow these steps to set up and run the project on your local machine using **VS Code**.
+
+1️⃣ **Clone the Repository**  
+   git clone https://github.com/your-username/book-a-tutor.git  
+
+2️⃣ **Navigate to the Project Folder**  
+   cd book-a-tutor  
+
+3️⃣ **Open the Project in VS Code**  
+   code .  
+
+4️⃣ **Install Dependencies**  
+   npm install  
+
+5️⃣ **Set Up Environment Variables**  
+   - Add required environment variables (e.g., API keys, database URLs)  
+
+6️⃣ **Run the Development Server**  
+   npm run dev  
+   
+## 📦 Dependencies Used  
+Below are the key dependencies used in this project:  
+
+```json
+{
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-router-dom": "^6.11.2",
+    "tailwindcss": "^3.0.0",
+    "firebase": "^9.6.1",
+    "stripe": "^8.0.0",
+    "axios": "^1.3.4",
+    "jsonwebtoken": "^9.0.0",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "sweetalert2": "^11.3.4",
+    "react-toastify": "^9.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "daisyui": "^1.20.0",
+    "sslcommerz-node": "^1.0.0"
+  }
+}
+
+
+
